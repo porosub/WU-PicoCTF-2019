@@ -5,8 +5,8 @@
 
 | Kriptografi           |
 | -------------         |
-| [The Numbers](#1-the-numbers)     |
-| [caesar](#2-caesar)               |
+| [The Numbers](#1-the-numbers-50)     |
+| [caesar](#2-caesar-100)               |
 | [Flags]()                         |
 | [la cifra de]()                   |
 | [rsa-pop-quiz]()                  |
