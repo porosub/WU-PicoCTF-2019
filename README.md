@@ -12,7 +12,7 @@ WriteUP PicoCTF 2019 oleh Poros Filkom UB
 
 ## Daftar Soal (Urut Sesuai Jumlah Poin)
 
-| General Skills  |
+| Keterampilan Umum  |
 | ------------- |
 | [The Factory’s Secret]()|
 | [2Warm]()|
@@ -32,7 +32,7 @@ WriteUP PicoCTF 2019 oleh Poros Filkom UB
 | [mus1c]()|
 | [1_wanna_b3_a_r0ck5tar]()|
 
-| Cryptography  |
+| Kriptografi  |
 | ------------- |
 | [The Numbers]()|
 | [13]()|
@@ -46,7 +46,7 @@ WriteUP PicoCTF 2019 oleh Poros Filkom UB
 | [miniRSA]()|
 | [waves over lambda]()|
 
-| Forensics  |
+| Forensik  |
 | ------------- |
 | [Glory of the Garden]()|
 | [unzip]()|
@@ -65,7 +65,7 @@ WriteUP PicoCTF 2019 oleh Poros Filkom UB
 | [Investigative Reversing 2]()|
 | [pastaAAA]()|
 
-| Reverse Engineering  |
+| Rekayasa Balik  |
 | ------------- |
 | [vault-door-training]()|
 | [vault-door-1]()|
@@ -81,8 +81,7 @@ WriteUP PicoCTF 2019 oleh Poros Filkom UB
 | [Time’s Up]()|
 | [asm4]()|
 
-
-| Web Exploitation  |
+| Exploitasi Web |
 | ------------- |
 | [Insp3ct0r]()|
 | [dont-use-client-side]()|
