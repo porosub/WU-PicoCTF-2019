@@ -1,6 +1,6 @@
-# Kriptografi
+# Keterampilan Umum
 
-## Penulis: [Seseorang01]
+## Penulis: [joulephicar](https://github.com/joulephicar)
 ## Daftar Isi:
 
 | Keterampilan Umum                                |
