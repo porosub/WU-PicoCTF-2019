@@ -50,4 +50,21 @@ seperti sebelumnya kita bisa menggunakan command strings untuk mengetahui flag.
   ```
 </details>
 
-## 
+## 3. What Lies Within
+
+
+### Soal:
+
+Find the flag in this picture. You can also find the file in /problems/so-meta_3_6dc950904c3ee41f324ae8d9f142f2b8.
+
+### Pembahasan:
+
+seperti sebelumnya kita bisa menggunakan command strings untuk mengetahui flag.
+
+<details>
+  <summary>Tekan untuk melihat flag</summary>
+  
+  ```
+  picoCTF{s0_m3ta_43f253bb}
+  ```
+</details>
