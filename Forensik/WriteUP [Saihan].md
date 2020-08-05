@@ -1,6 +1,6 @@
 # Forensik
 
-## Penulis: [Seseorang01]
+## Penulis: [Saihan]
 ## Daftar Isi:
 
 | Forensik  |
@@ -22,7 +22,15 @@ This garden contains more than it seems. You can also find the file in /problems
     
 ### Pembahasan:
 
-...
+kita bisa membuka file garden menggunakan hex editor atau menggunakan command strings
+
+<details>
+  <summary>Tekan untuk melihat flag</summary>
+  
+  ```
+  picoCTF{more_than_m33ts_the_3y31e0af5C7}
+  ```
+</details>
 
 ## 2. So Meta
 
