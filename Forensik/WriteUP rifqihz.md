@@ -43,7 +43,7 @@ picoCTF{s0_m3ta_43f253bb}
 
 ## 3. What Lies Within (150 pts)
 ### Soal:
-
+Theres something in the [building](https://2019shell1.picoctf.com/static/aec3861fc4d5bce4d39dc0db196426de/buildings.png). Can you retrieve the flag?
 ### Pembahasan:
 Menggunakan [zsteg](https://github.com/zed-0xff/zsteg) untuk menemukan flag yang tersembunyi di dalam gambar
 <details>
