@@ -5,16 +5,16 @@
 
 | Forensik  |
 | ------------- |
-| [unzip]()|
-| [extensions]()|
-| [c0rrupt]()|
+| [unzip](#1-unzip-50)|
+| [extensions](#2-extensions-150)|
+| [c0rrupt](#3-c0rrupt-250)|
 | [m00nwalk]()|
 | [shark on wire 2]()|
 | [m00nwalk2]()|
 | [Investigative Reversing 1]()|
 
 ---
-## 1. unzip
+## 1. unzip (50)
 
 ### Soal:
 
@@ -32,7 +32,7 @@ kita bisa menemukan flag dengan mengekstrak file flag.zip
   ```
 </details>
 
-## 2. extensions
+## 2. extensions (150)
 
 ### Soal:
 
@@ -61,7 +61,7 @@ muncul sejumlah karakter dengan header PNG, lalu ubah ekstensi dari txt ke png m
   ```
 </details>
 
-## c0rrupt
+## 3. c0rrupt (250)
 
 ### soal : 
 
