@@ -8,7 +8,7 @@
 | [unzip](#1-unzip-50)|
 | [extensions](#2-extensions-150)|
 | [c0rrupt](#3-c0rrupt-250)|
-| [m00nwalk]()|
+| [m00nwalk](#4-m00nwalk-250)|
 | [shark on wire 2]()|
 | [m00nwalk2]()|
 | [Investigative Reversing 1]()|
@@ -127,5 +127,23 @@ lalu kita bisa buka dengan aplikasi penampil gambar
   
   ```
   picoCTF{c0rrupt10n_1847995}
+  ```
+</details>
+
+## 4. m00nwalk (250)
+ 
+### Soal :
+
+Decode this message from the moon. You can also find the file in /problems/m00nwalk_0_05441e9344c829ba5a648e8b28ef1564.
+
+### Pembahasan :
+
+untuk mendapatkan flag, kita bisa merekam kembali suara menggunakan aplikasi sstv decoder.
+
+<details>
+  <summary>Tekan untuk melihat flag</summary>
+  
+  ```
+  picoCTF{beep_boop_im_in_space}
   ```
 </details>
