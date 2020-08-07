@@ -5,9 +5,9 @@
 
 | Rekayasa Balik  |
 | ------------- |
-| [vault-door-training]()|
-| [vault-door-2]()|
-| [asm1]()|
+| [vault-door-training](#1-vault-door-training)|
+| [vault-door-1](#2-vault-door-1)|
+| [asm1](#3-asm1)|
 | [vault-door-4]()|
 | [asm3]()|
 | [vault-door-6]()|
@@ -25,9 +25,7 @@ Flag terlihat jelas ada fungsi check password.
 <details>
 	<summary>Flagnya</summary>
 
-	```
 	picoCTF{w4rm1ng_Up_w1tH_jAv4_e57d01a632a}
-	```
 
 </details>  
 
@@ -42,13 +40,26 @@ Flag terlihat jelas tapi kita disuruh mengurutkan terlebih dahulu.
 <details>
 	<summary>Flagnya</summary>
 
-	```
 	picoCTF{d35cr4mbl3_tH3_cH4r4cT3r5_51e7fd}
-	```
 
 </details>
 
-## 3. vault-door-3
+## 3 asm1
+
+### Soal:
+What does asm1(0x53e) return? Submit the flag as a hexadecimal value (starting with '0x'). NOTE: Your submission for this question will NOT be in the normal flag format. [Source](https://2019shell1.picoctf.com/static/646a8167294d5c95b6446576264f24ab/test.S) located in the directory at /problems/asm1_4_431c7088e03c0028398793773ccf89d7.
+
+### Pembahasan:
+Kita lihat dulu source codenya. setelah dianalisa flag meminta return dari *0x53e*.  
+*0x53e* dibandingkan dengan *0x35d* karena lebih besar jadi masuk ke <code><+10>:	jg     0x512 <asm1+37></code> lalu dibandingkan lagi <code><+37>:	cmp    DWORD PTR [ebp+0x8],0x53e</code>, karena sama lalu dilakukan <code>sub</code> sebanyak *0xb* dan itu adalah flagnya.
+<details>
+	<summary>Flagnya</summary>
+
+	0x533
+
+</details>
+
+## 4. vault-door-3
 
 ### Soal
 This vault uses for-loops and byte arrays. The source code for this vault is here: [VaultDoor3.java](https://2019shell1.picoctf.com/static/effb51263df645722a6eb4e1e82c69da/VaultDoor3.java)
@@ -60,9 +71,8 @@ cara lain yaitu dengan mengakalinya dengan comment *password.length*, lalu kita 
 <details>
 	<summary>Flagnya</summary>
 
-	```
 	picoCTF{jU5t_a_s1mpl3_an4gr4m_4_u_c33f38}
-	```
+
 </details>
 
 
