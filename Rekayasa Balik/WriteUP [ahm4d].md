@@ -5,9 +5,9 @@
 
 | Rekayasa Balik  |
 | ------------- |
-| [vault-door-training](#1-vault-door-training)|
-| [vault-door-1](#2-vault-door-1)|
-| [asm1](#3-asm1)|
+| [vault-door-training](#1-vault-door-training-50)|
+| [vault-door-1](#2-vault-door-1-100)|
+| [asm1](#3-asm1-200)|
 | [vault-door-4]()|
 | [asm3]()|
 | [vault-door-6]()|
