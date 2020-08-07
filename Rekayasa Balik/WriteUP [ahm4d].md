@@ -67,7 +67,7 @@ This vault uses for-loops and byte arrays. The source code for this vault is her
 ### Pembahasan:
 Kita download dulu file [VaultDoor3.java](https://2019shell1.picoctf.com/static/effb51263df645722a6eb4e1e82c69da/VaultDoor3.java), setelah itu kita buka menggunakan text editor.  
 kita fokus ke fungsi <code>checkPassword</code>, lalu mengurutkan secara manual.  
-cara lain yaitu dengan mengakalinya dengan comment *password.length*, lalu kita isi *password* dengan isi string *s*, dan menampilkan setelah perulangan selesai menggunakan keyword *new String(buffer)* (karena ada pembuatan objek baru dari buffer yang mana itu nanti akan menampilkan flag yang valid). 
+cara lain yaitu dengan mengakalinya dengan comment *password.length*, lalu kita isi *password* dengan isi string *s*, dan menampilkan setelah perulangan selesai menggunakan keyword *new String(buffer)* (karena ada pembuatan objek baru dari buffer yang mana itu nanti akan menampilkan flag yang valid).
 <details>
 	<summary>Flagnya</summary>
 
