@@ -1,6 +1,6 @@
 # Rekayasa Balik
 
-## Penulis: [Seseorang01]
+## Penulis: Aldi Fianda Putra
 ## Daftar Isi:
 
 | Rekayasa Balik  |
