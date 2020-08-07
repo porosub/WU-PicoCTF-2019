@@ -80,10 +80,11 @@ class VaultDoor1 {
                password.charAt(31) == 'f';
     }
 }
+```
 
 maka diperoleh kondisi checkPassword, sehingga tinggal mengurutkan 32 char dari 0 sampai 31 sehingga diperoleh passwordnya sebagai berikut
 d35cr4mbl3_tH3_cH4r4cT3r5_9d038f
-```
+
 <details>
   <summary>Tekan untuk melihat flag</summary>
   
