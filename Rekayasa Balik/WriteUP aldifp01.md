@@ -5,16 +5,16 @@
 
 | Rekayasa Balik  |
 | ------------- |
-| [vault-door-1]()|
-| [vault-door-3]()|
+| [vault-door-1](#1-vault-door-1-100)|
+| [vault-door-3](#2-vault-door-3-200)|
 | [asm2]()|
-| [vault-door-5]()|
+| [vault-door-5](#3-vault-door-5-300)|
 | [Need For Speed]()|
 | [vault-door-7]()|
 | [Time’s Up]()|
 
 ---
-## 1. vault-door-1
+## 1. vault door 1 (100)
 
 ### Soal:
 This vault uses some complicated arrays! I hope you can make sense of it, special agent. The source code for this vault is here: VaultDoor1.java
@@ -93,7 +93,7 @@ d35cr4mbl3_tH3_cH4r4cT3r5_9d038f
   ```
 </details>
 
-## 2. vault-door-3
+## 2. vault door 3 (200)
 
 ### Soal:
 This vault uses for-loops and byte arrays. The source code for this vault is here: VaultDoor3.java
@@ -171,10 +171,9 @@ public class vaultdoor3Solution {
         System.out.println(yangbenarnya);
     }
 }
-
+```
 sehingga diperoleh hasil output sebagai berikut
 jU5t_a_s1mpl3_an4gr4m_4_u_5baf7c
-```
 
 <details>
   <summary>Tekan untuk melihat flag</summary>
@@ -184,7 +183,7 @@ jU5t_a_s1mpl3_an4gr4m_4_u_5baf7c
   ```
 </details>
 
-## 3. vault-door-5
+## 3. vault door 5 (300)
 
 ### Soal:
 In the last challenge, you mastered octal (base 8), decimal (base 10), and hexadecimal (base 16) numbers, but this vault door uses a different change of base as well as URL encoding! The source code for this vault is here: VaultDoor5.java
