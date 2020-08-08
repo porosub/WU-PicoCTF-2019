@@ -22,6 +22,8 @@ There appear to be some mysterious glyphs hidden inside this [abandoned factory]
 
 ### Pembahasan:
 
+Soal ini berkaitan dengan *story* yang ada pada game picoCTF 2019. Anda diminta untuk mencari beberapa potongan *glyph* yang tersebar di beberapa ruangan dan nantinya didapat sebuah *qr code* yang berisi kata sandi untuk dimasukan ke dalam komputer agar mendapatkan flagnya. Write-UP lebih lengkap telah dibuat oleh **Andrew Chang** atau **fourthpencil** melalui [kanal youtubenya](https://www.youtube.com/channel/UCcL-1qHt9A8CIHtyfIM0ILA).
+
 ## 2. 2Warm (50)
 
 ### Soal:
@@ -95,7 +97,27 @@ Out[1]: 61
 
 ### Soal:
 
+What does this <code>bDNhcm5fdGgzX3IwcDM1</code> mean? I think it has something to do with bases.
+
 ### Pembahasan:
+
+Untuk soal ini, terdapat hint berupa **bases**, jika mencari kata kunci tersebut ditambah kata *encode / decode* maka terdapat satu kosa kata yaitu *radix* dan *base32, base64, base85,* dst. Dari daftar *radix / base* yang terkenal kita bisa melihat bentuk kata ini mirip dengan hasil *encode base64*. Maka bisa kita coba di python menggunakan library **base64** untuk melakukan *decode*.
+
+```py
+import base64
+unk_s = "bDNhcm5fdGgzX3IwcDM1"
+dec_s = base64.b64decode(unk_s)
+
+print("picoCTF{" + str(dec_s)[2:-1] + "}")
+```
+
+<details>
+  <summary>Tekan untuk melihat flag</summary>
+  
+  ```
+  picoCTF{l3arn_th3_r0p35}
+  ```
+</details>
 
 ## 6. First Grep (50)
 
@@ -103,9 +125,24 @@ Out[1]: 61
 
 ### Pembahasan:
 
+<details>
+  <summary>Tekan untuk melihat flag</summary>
+  
+  ```
+  picoCTF{}
+  ```
+</details>
+
 ## 7. Resources (50)
 
 ### Soal:
 
 ### Pembahasan:
 
+<details>
+  <summary>Tekan untuk melihat flag</summary>
+  
+  ```
+  picoCTF{}
+  ```
+</details>
