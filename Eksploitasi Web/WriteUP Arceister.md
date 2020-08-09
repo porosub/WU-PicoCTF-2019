@@ -6,7 +6,7 @@
 | Exploitasi Web |
 | ------------- |
 | [Insp3ct0r](#1.-insp3ct0r)|
-| [dont-use-client-side]()|
+| [dont-use-client-side](#2.-dont-use-client-side)|
 | [logon]()|
 | [where are the robots]()|
 | [Client-side-again]()|
@@ -45,8 +45,8 @@ Inget aja kalo Frontend dasar itu terdiri dari 3 Unsur, yaitu **HTML, CSS, dan J
 Dari 2 source tersebut maka flag bagian kedua dan ketiga sudah ditemukan, yaitu `t3ct1ve_0r_ju5t` dan `_lucky?1638dbe7}`.
 
 <details><summary>Tekan untuk melihat flag</summary>
-``` 
-picoCTF{tru3_d3t3ct1ve_0r_ju5t_lucky?1638dbe7}
+```
+  picoCTF{tru3_d3t3ct1ve_0r_ju5t_lucky?1638dbe7}
 ```
 </details>
 
@@ -55,6 +55,45 @@ picoCTF{tru3_d3t3ct1ve_0r_ju5t_lucky?1638dbe7}
 
 ### Soal:
 
+Can you break into this super secure portal? https://2019shell1.picoctf.com/problem/37893/ ([link](https://2019shell1.picoctf.com/problem/37893/)) or http://2019shell1.picoctf.com:37893
+
 ### Pembahasan:
+
+Kita dikasih lagi sebuah web, kali ini web tersebut menyuruh kita memasukkan password untuk mendapat flagnya.<br>
+
+![Page](https://lh3.googleusercontent.com/pw/ACtC-3cIYKQKzsXf8e8XtjgW4ukGewrxlpw1AcH4lFgCD0bbaCbwanKbDT1Qlb2yD5uorvd6IwEineCg23BHpfMK2yTIkFph5mbVaDozikXS7kR-_HSjAVT_d7X5vTeNbr2Srjmc_we3tB037n4L1Ts_gzAb=w1128-h634-no?authuser=0)
+
+*Eits tunggu dulu,* ada sesuatu yang *mengganjal* disini. Apa itu? ya **judul challengenya**.
+
+Oke, langsung aja kita *view source page*, dan hasilnya
+
+![PageSource](https://lh3.googleusercontent.com/pw/ACtC-3d4s5v02oir2znQ85TRYgn2bjjIKauA5ccdw7P0nQjaeobJtE1lZdw3-G88IeAzPgMfI4ZCoODQB13NJGIpIiE1EuRifwt9B21-QNKqhzMXmr-cCRjGsxtY8ixIKa7-OeF2GsB1FG27-7xBK-HP7ZTm=w1128-h634-no?authuser=0)
+
+*Well*, kita mendapatkan flagnya berbentuk **Javascript**. Jika split dirubah menjadi 4, dan diurutkan menurut substring maka kita akan menemukan flagnya:
+```
+checkpass.substring(0, 4) == 'pico')
+checkpass.substring(4, 8) == 'CTF{')
+checkpass.substring(8, 12) == 'no_c') 
+checkpass.substring(12, 16) == 'lien')
+checkpass.substring(16, 20) == 'ts_p')
+checkpass.substring(20, 24) == 'lz_9')
+checkpass.substring(24, 28) == '0ff3')
+checkpass.substring(28, 32) == '4}')
+```
+<sub>*ini udah diurutin sama dihilangin ifnya*</sub>
+
+Sekarang kita coba memasukkan flag yang sudah kita dapatkan sebagai password di web tersebut.
+
+![PassVerified](https://lh3.googleusercontent.com/pw/ACtC-3cvLaJtKRbZYojfbHnAOpbXFuDeZ9qJI1qlJR8wlABWS7l2Xujw__cxw-EtIDj0xiXnv3TjcJwYBh8vEQVwpdX9IHzUZaU9nkdGww_Tg9o1NBdTtnUf3FaI2mE3g6m155tobanXfSuxn4qYJNGxMq2C=w1128-h634-no?authuser=0)
+
+*Tadaa!* Verifikasi sukses. Intinya client side ini hanya untuk memvalidasi flag yang kita dapatkan. **Cara dapet flagnya ya jangan liat client side**, sesuai petunjuk soal.
+
+![pepelaugh](https://i.kym-cdn.com/photos/images/original/001/460/439/32f.jpg)
+
+<details><summary>Tekan untuk melihat flag</summary>
+```
+  picoCTF{no_clients_plz_90ff34}
+```
+</details>
 
 ## 
