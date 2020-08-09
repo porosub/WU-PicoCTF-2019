@@ -44,9 +44,10 @@ Inget aja kalo Frontend dasar itu terdiri dari 3 Unsur, yaitu **HTML, CSS, dan J
 
 Dari 2 source tersebut maka flag bagian kedua dan ketiga sudah ditemukan, yaitu `t3ct1ve_0r_ju5t` dan `_lucky?1638dbe7}`.
 
-<details><summary>Tekan untuk melihat flag</summary>
+<details>
+<summary>Tekan untuk melihat flag</summary>
 
-  picoCTF{tru3_d3t3ct1ve_0r_ju5t_lucky?1638dbe7}
+  <code>picoCTF{tru3_d3t3ct1ve_0r_ju5t_lucky?1638dbe7}</code>
 
 </details>
 
@@ -93,7 +94,7 @@ Sekarang kita coba memasukkan flag yang sudah kita dapatkan sebagai password di 
 <details>
 <summary>Tekan untuk melihat flag</summary>
 
-  picoCTF{no_clients_plz_90ff34}
+  <code>picoCTF{no_clients_plz_90ff34}</code>
 
 </details>
 
