@@ -1,6 +1,6 @@
 # Eksploitasi Web
 
-## Penulis: [Arceister]
+## Penulis: [Arceister](https://github.com/Arceister)
 ## Daftar Isi:
 
 | Exploitasi Web |
@@ -14,7 +14,7 @@
 | [picobrowser]()|
 
 ---
-## 1. Insp3ct0r
+## 1. Insp3ct0r (50)
 
 ### Soal:
 
@@ -45,13 +45,13 @@ Inget aja kalo Frontend dasar itu terdiri dari 3 Unsur, yaitu **HTML, CSS, dan J
 Dari 2 source tersebut maka flag bagian kedua dan ketiga sudah ditemukan, yaitu `t3ct1ve_0r_ju5t` dan `_lucky?1638dbe7}`.
 
 <details><summary>Tekan untuk melihat flag</summary>
-```
+
   picoCTF{tru3_d3t3ct1ve_0r_ju5t_lucky?1638dbe7}
-```
+
 </details>
 
 
-## 2. dont-use-client-side
+## 2. dont-use-client-side (100)
 
 ### Soal:
 
@@ -90,10 +90,11 @@ Sekarang kita coba memasukkan flag yang sudah kita dapatkan sebagai password di 
 
 ![pepelaugh](https://i.kym-cdn.com/photos/images/original/001/460/439/32f.jpg)
 
-<details><summary>Tekan untuk melihat flag</summary>
-```
+<details>
+<summary>Tekan untuk melihat flag</summary>
+
   picoCTF{no_clients_plz_90ff34}
-```
+
 </details>
 
 ## 
