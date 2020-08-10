@@ -5,8 +5,8 @@
 
 | Exploitasi Web |
 | ------------- |
-| [Insp3ct0r](#1.-insp3ct0r)|
-| [dont-use-client-side](#2.-dont-use-client-side)|
+| [Insp3ct0r](#1-insp3ct0r-50)|
+| [dont-use-client-side](#2-dont-use-client-side-100)|
 | [logon]()|
 | [where are the robots]()|
 | [Client-side-again]()|
