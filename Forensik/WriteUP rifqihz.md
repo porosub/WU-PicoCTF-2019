@@ -5,13 +5,13 @@
 
 | Forensik  |
 | ------------- |
-| [Glory of the Garden](#1.-glory-of-the-garden-(50-pts))|
-| [So Meta](#2.-so-meta-(150-pts))|
-| [What Lies Within](#3.-what-lies-within-(150-pts))|
-| [Shark on wire 1](#4.-shark-on-wire-1-(150-pts))|
-| [WhitePages](#5.-whitepages-(250-pts))|
-| [like1000](#6.-like1000-(250-pts))|
-| [Investigative Reversing 0](#7.-investigative-reversing-0-(300-pts))|
+| [Glory of the Garden](#1-glory-of-the-garden-50-pts)|
+| [So Meta](#2-so-meta-150-pts)|
+| [What Lies Within](#3-what-lies-within-150-pts)|
+| [Shark on wire 1](#4-shark-on-wire-1-150-pts)|
+| [WhitePages](#5-whitepages-250-pts)|
+| [like1000](#6-like1000-250-pts)|
+| [Investigative Reversing 0](#7-investigative-reversing-0-300-pts)|
 
 ---
 ## 1. Glory of the Garden (50 pts)
@@ -43,7 +43,7 @@ picoCTF{s0_m3ta_43f253bb}
 
 ## 3. What Lies Within (150 pts)
 ### Soal:
-
+Theres something in the [building](https://2019shell1.picoctf.com/static/aec3861fc4d5bce4d39dc0db196426de/buildings.png). Can you retrieve the flag?
 ### Pembahasan:
 Menggunakan [zsteg](https://github.com/zed-0xff/zsteg) untuk menemukan flag yang tersembunyi di dalam gambar
 <details>
