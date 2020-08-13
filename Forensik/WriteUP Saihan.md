@@ -212,3 +212,13 @@ picoCTF{the_answer_lies_hidden_in_plain_sight}
   picoCTF{the_answer_lies_hidden_in_plain_sight}
   ```
 </details>
+
+## 7. Investigative reversing 1
+
+### Soal :
+
+We have recovered a [binary](https://2019shell1.picoctf.com/static/9e61f958201d4c4a7e7e01aa06edf224/mystery) and a few images: [image](https://2019shell1.picoctf.com/static/9e61f958201d4c4a7e7e01aa06edf224/mystery.png), [image2](https://2019shell1.picoctf.com/static/9e61f958201d4c4a7e7e01aa06edf224/mystery2.png), [image3](https://2019shell1.picoctf.com/static/9e61f958201d4c4a7e7e01aa06edf224/mystery3.png). See what you can make of it. There should be a flag somewhere. Its also found in /problems/investigative-reversing-1_2_72fdacf1b15a239d3327571cd296b954 on the shell server.
+
+### Pembahasan :
+
+
