@@ -221,4 +221,3 @@ We have recovered a [binary](https://2019shell1.picoctf.com/static/9e61f958201d4
 
 ### Pembahasan :
 
-
