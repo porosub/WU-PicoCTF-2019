@@ -10,7 +10,7 @@
 | [c0rrupt](#3-c0rrupt-250)|
 | [m00nwalk](#4-m00nwalk-250)|
 | [shark on wire 2](#5-shark-on-wire-2-300)|
-| [m00nwalk2]()|
+| [m00nwalk2](#6-m00nwalk-2-300)|
 | [Investigative Reversing 1]()|
 
 ---
@@ -173,3 +173,42 @@ lalu kita rubah ke ascii, dan kita akan mendapat flag nya.
   ```
 </details>
  
+## 6. m00nwalk 2 (300)
+
+### Soal : 
+
+Revisit the last [transmission](https://2019shell1.picoctf.com/static/1b9456ca6c4ee2a2aa094d98581f8c37/message.wav). We think this transmission contains a hidden message. There are also some clues [clue 1](https://2019shell1.picoctf.com/static/1b9456ca6c4ee2a2aa094d98581f8c37/clue1.wav), [clue 2](https://2019shell1.picoctf.com/static/1b9456ca6c4ee2a2aa094d98581f8c37/clue2.wav), [clue 3](https://2019shell1.picoctf.com/static/1b9456ca6c4ee2a2aa094d98581f8c37/clue3.wav). You can also find the files in /problems/m00nwalk2_0_c513cbf9ae6c76876372b8e29826e77b.
+
+### Pembahasan :
+
+mari kita buka dulu dengan menggunakan sstv decoder didapatkan hasil:
+
+clue :
+```
+1 Password hidden_stegosaurus
+2 The quieter you are the more you can HEAR
+3 Alan Eliasen the FutureBoy 
+```
+
+dan untuk file message ketika kita coba decode menggunakan sstv decoder menampilkan flag soal [m00nwalk](#4-m00nwalk-250).
+
+kita coba resapi dan hayati setiap clue, clue 1 kita bisa ambil bahwa password untuk mendapatkan flag adalah hidden_stegosaurus, untuk clue 3 setelah kita coba search di pencarian ternyata merujuk ke [website ini](https://futureboy.us/stegano/decinput.html)
+
+kita bisa mendecode melalui web tersebut atau menggunakan terminal melalui command:
+
+```
+┌─[nabawi@parrot]─[~/Downloads]
+└──╼ $steghide extract -sf message.wav -p hidden_stegosaurus
+wrote extracted data to "steganopayload12154.txt".
+┌─[nabawi@parrot]─[~/Downloads]
+└──╼ $cat steganopayload12154.txt 
+picoCTF{the_answer_lies_hidden_in_plain_sight}
+```
+
+<details>
+  <summary>Tekan untuk melihat flag</summary>
+  
+  ```
+  picoCTF{the_answer_lies_hidden_in_plain_sight}
+  ```
+</details>
