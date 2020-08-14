@@ -107,7 +107,7 @@ Kita harus menyamakan *passByte* dengan *myBytes* (kalau tidak maka acces denied
 <details>
     <summary>Flagnya</summary>
 
-    ppicoCTF{jU5t_4_bUnCh_0f_bYt3s_80f8e1e047}
+    picoCTF{jU5t_4_bUnCh_0f_bYt3s_80f8e1e047}
 
 </details>  
 
