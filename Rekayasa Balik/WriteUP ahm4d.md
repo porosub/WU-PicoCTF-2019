@@ -8,7 +8,7 @@
 | [vault-door-training](#1-vault-door-training-50)|
 | [asm1](#2-asm1-200)|
 | [vault-door-4](#3-vault-door-4-250)|
-| [asm3](#4-asm-300)|
+| [asm3](#4-asm3-300)|
 | [vault-door-6](#5-vault-door-6-350)|
 | [Time’s Up]()|
 
