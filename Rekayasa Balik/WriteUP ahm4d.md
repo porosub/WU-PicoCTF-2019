@@ -70,7 +70,7 @@ setelah dianalisa flag meminta return dari *0x53e*.
 <details>
 	<summary>Flagnya</summary>
 
-	0x533
+	picoCTF{0x533}
 
 </details>
 
@@ -158,7 +158,7 @@ gcc -m32 test.o soltest.o -o test
 <details>
     <summary>Flagnya</summary>
 
-    0xa72e
+    picoCTF{0xa72e}
 
 </details>  
 
