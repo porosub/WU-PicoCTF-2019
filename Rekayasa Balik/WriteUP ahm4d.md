@@ -5,15 +5,15 @@
 
 | Rekayasa Balik  |
 | ------------- |
-| [vault-door-training](#vault-door-training-50)|
-| [asm1](#asm1-200)|
-| [vault-door-4](#vault-door-4-250)|
-| [asm3]()|
-| [vault-door-6](#vault-door-6-350)|
+| [vault-door-training](#1-vault-door-training-50)|
+| [asm1](#2-asm1-200)|
+| [vault-door-4](#3-vault-door-4-250)|
+| [asm3](#4-asm-300)|
+| [vault-door-6](#5-vault-door-6-350)|
 | [Time’s Up]()|
 
 ---
-## vault-door-training (50)
+## 1. vault-door-training (50)
 
 ### Soal:
 Your mission is to enter Dr. Evil's laboratory and retrieve the blueprints for his Doomsday Project. The laboratory is protected by a series of locked vault doors. Each door is controlled by a computer and requires a password to open. Unfortunately, our undercover agents have not been able to obtain the secret passwords for the vault doors, but one of our junior agents obtained the source code for each vault's computer! You will need to read the source code for each level to figure out what the password is for that vault door. As a warmup, we have created a replica vault in our training facility. The source code for the training vault is here: [VaultDoorTraining.java](https://2019shell1.picoctf.com/static/56c37b7d53ba094dd5b05587ad27d3cf/VaultDoorTraining.java)
@@ -34,7 +34,7 @@ Flag terlihat jelas ada fungsi check password.
 </details>  
 
 
-## asm1 (200)
+## 2. asm1 (200)
 
 ### Soal:
 What does asm1(0x53e) return? Submit the flag as a hexadecimal value (starting with '0x'). NOTE: Your submission for this question will NOT be in the normal flag format. [Source](https://2019shell1.picoctf.com/static/646a8167294d5c95b6446576264f24ab/test.S) located in the directory at /problems/asm1_4_431c7088e03c0028398793773ccf89d7.
@@ -74,7 +74,7 @@ setelah dianalisa flag meminta return dari *0x53e*.
 
 </details>
 
-## vault-door-4 (250)
+## 3. vault-door-4 (250)
 
 ### Soal:
 This vault uses ASCII encoding for the password. The source code for this vault is here: [VaultDoor4.java](https://2019shell1.picoctf.com/static/b8a4ba51f30b373f6df7682709e43c8d/VaultDoor4.java)
@@ -111,9 +111,59 @@ Kita harus menyamakan *passByte* dengan *myBytes* (kalau tidak maka acces denied
 
 </details>  
 
-## asm-2
+## 4. asm-3 (300)
 
-## vault-door-6 (350)
+### Soal:
+What does asm3(0xd46c9935,0xdfe28722,0xb335450f) return? Submit the flag as a hexadecimal value (starting with '0x'). NOTE: Your submission for this question will NOT be in the normal flag format. [Source](https://2019shell1.picoctf.com/static/7fa30288613be44a6a39c1191ccf1971/test.S) located in the directory at /problems/asm3_2_376e88472c6a9317470a12cc31d506a4.
+
+### Pembahasan:
+kita lihat dulu source code.
+setelah dianalisa dan mencari referensi dari internet, ternyata source code kita ubah agar bisa dicompile
+<code>test.S</code>
+```
+.intel_syntax noprefix
+.global asm3
+asm3:
+        push   ebp
+        mov    ebp,esp
+        xor    eax,eax
+        mov    ah,BYTE PTR [ebp+0xa]
+        shl    ax,0x10
+        sub    al,BYTE PTR [ebp+0xf]
+        add    ah,BYTE PTR [ebp+0xe]
+        xor    ax,WORD PTR [ebp+0x10]
+        nop
+        pop    ebp
+        ret    
+
+```
+lalu buat source code menggunakan bahasa C untuk menampilkan flag (masukkan parameter sesuai pada soal)
+<code>soltest.c</code>
+```
+ #include <stdio.h>
+ int asm3(int, int, int);
+ int main(int argc, char* argv[]){
+    printf("flag: 0x%x",asm3(0xd46c9935,0xdfe28722,0xb335450f));
+    return 0;
+ }
+```
+lalu compile dengan gcc dengan perintah:
+```
+gcc -masm=intel -m32 -c test.S -o test.o
+gcc -m32 test.o soltest.o -o test
+gcc -m32 -c soltest.c -o soltest.o
+gcc -m32 test.o soltest.o -o test
+./test
+```
+<details>
+    <summary>Flagnya</summary>
+
+    0xa72e
+
+</details>  
+
+
+## 5. vault-door-6 (350)
 
 ### Soal:
 This vault uses an XOR encryption scheme. The source code for this vault is here: [VaultDoor6.java](https://2019shell1.picoctf.com/static/baceedcb57993355ba6eac807ca041b0/VaultDoor6.java)
