@@ -111,7 +111,7 @@ Kita harus menyamakan *passByte* dengan *myBytes* (kalau tidak maka acces denied
 
 </details>  
 
-## 4. asm-3 (300)
+## 4. asm3 (300)
 
 ### Soal:
 What does asm3(0xd46c9935,0xdfe28722,0xb335450f) return? Submit the flag as a hexadecimal value (starting with '0x'). NOTE: Your submission for this question will NOT be in the normal flag format. [Source](https://2019shell1.picoctf.com/static/7fa30288613be44a6a39c1191ccf1971/test.S) located in the directory at /problems/asm3_2_376e88472c6a9317470a12cc31d506a4.
