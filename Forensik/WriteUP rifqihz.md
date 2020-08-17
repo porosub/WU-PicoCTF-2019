@@ -79,18 +79,107 @@ picoCTF{not_all_spaces_are_created_equal_dd5c2e2f77f89f3051c82bfee7d996ef}
 
 ## 6. like1000 (250 pts)
 ### Soal:
-
+This [.tar file](https://2019shell1.picoctf.com/static/8694f84879d3b7c0dcf775930f4665fc/1000.tar) got tarred alot.
 ### Pembahasan:
-
+Diberikan file yang dicompress menggunakan tar sebanyak 1000 kali, berikut script untuk otomatis mengextractnya
+```bash
+#!/bin/bash
+for ((i=1000; i>=1; i--))
+do
+	tar -xvf $i.tar
+	rm $i.tar
+done
+```
 <details>
 <summary>Tekan untuk melihat flag</summary>
+picoCTF{l0t5_0f_TAR5}
 </details>
 
 ## 7. Investigative Reversing 0 (300 pts)
 ### Soal:
-
+We have recovered a [binary](https://2019shell1.picoctf.com/static/f966ba61e10185850241bda844290324/mystery) and an [image](https://2019shell1.picoctf.com/static/f966ba61e10185850241bda844290324/mystery.png). See what you can make of it. There should be a flag somewhere.
 ### Pembahasan:
+Diberikan sebuah gambar lalu dibagian akhir jika dilihat menggunakan hex editor terdapat flag yang terenkripsi :  
+`picoCTK.k5zsid6q_e66efc1b}`  
+Lalu Reverse file binary menggunakan [ghidra](https://ghidra-sre.org/) hasilnya fungsi main sebagai berikut
+```C
+void main(void)
+
+{
+  FILE *__stream;
+  FILE *__stream_00;
+  size_t sVar1;
+  long in_FS_OFFSET;
+  int local_54;
+  int local_50;
+  char local_38 [4];
+  char local_34;
+  char local_33;
+  char local_29;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  __stream = fopen("flag.txt","r");
+  __stream_00 = fopen("mystery.png","a");
+  if (__stream == (FILE *)0x0) {
+    puts("No flag found, please make sure this is run on the server");
+  }
+  if (__stream_00 == (FILE *)0x0) {
+    puts("mystery.png is missing, please run this on the server");
+  }
+  sVar1 = fread(local_38,0x1a,1,__stream);
+  if ((int)sVar1 < 1) {
+                    /* WARNING: Subroutine does not return */
+    exit(0);
+  }
+  puts("at insert");
+  fputc((int)local_38[0],__stream_00);
+  fputc((int)local_38[1],__stream_00);
+  fputc((int)local_38[2],__stream_00);
+  fputc((int)local_38[3],__stream_00);
+  fputc((int)local_34,__stream_00);
+  fputc((int)local_33,__stream_00);
+  local_54 = 6;
+  while (local_54 < 0xf) {
+    fputc((int)(char)(local_38[local_54] + '\x05'),__stream_00);
+    local_54 = local_54 + 1;
+  }
+  fputc((int)(char)(local_29 + -3),__stream_00);
+  local_50 = 0x10;
+  while (local_50 < 0x1a) {
+    fputc((int)local_38[local_50],__stream_00);
+    local_50 = local_50 + 1;
+  }
+  fclose(__stream_00);
+  fclose(__stream);
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return;
+}
+```
+Fungsi file C tersebut untuk memasukkan flag ke dalam gambar namun flag karakter ke 6 hingga ke 14 diubah nilai ASCIInya dinaikkan 5 lalu karakter ke 15 dikurangi 3
+
+Script untuk mengembalikan nilai flag sesuai aslinya
+```bash
+#!/usr/bin/env python
+data = '7069636f43544b806b357a73696436715f65363665666331627d'.decode('hex')
+
+print data
+data = bytearray(data)
+
+print data
+for i in range(6, 15):
+  data[i] -= 5
+
+data[15] += 3
+
+print data
+
+```
 
 <details>
 <summary>Tekan untuk melihat flag</summary>
+picoCTF{f0und_1t_e66efc1b}
 </details>
