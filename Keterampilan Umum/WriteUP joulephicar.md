@@ -123,13 +123,21 @@ print("picoCTF{" + str(dec_s)[2:-1] + "}")
 
 ### Soal:
 
+Can you find the flag in [file?](https://2019shell1.picoctf.com/static/458ae91cb23746189bf490f0c8d9a919/file) This would be really tedious to look through manually, something tells me there is a better way. You can also find the file in /problems/first-grep_2_04dbf496b78e6c37c0097cdfef734d88 on the shell server.
+
 ### Pembahasan:
+
+Untuk soal ini, sesuai dengan judulnya kita menggunakan command *grep* yang tersedia di *shell*. 
+
+```bash
+$ grep "picoCTF" file
+```
 
 <details>
   <summary>Tekan untuk melihat flag</summary>
   
   ```
-  picoCTF{}
+  picoCTF{grep_is_good_to_find_things_eda8911c}
   ```
 </details>
 
