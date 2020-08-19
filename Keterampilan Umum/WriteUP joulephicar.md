@@ -12,6 +12,7 @@
 | [Bases](#5-bases-50)                             |
 | [First Grep](#6-first-grep-50)                   |
 | [Resources](#7-resources-50)                     |
+| [strings it](#8-strings-it-50)|
 
 ---
 ## 1. The Factory’s Secret (1)
@@ -145,12 +146,39 @@ $ grep "picoCTF" file
 
 ### Soal:
 
+We put together a bunch of resources to help you out on our website! If you go over there, you might even find a flag! https://picoctf.com/resources
+
 ### Pembahasan:
+
+Flag berada pada halaman tersebut.
 
 <details>
   <summary>Tekan untuk melihat flag</summary>
   
   ```
-  picoCTF{}
+  picoCTF{r3source_pag3_f1ag}
   ```
 </details>
+
+## 8. strings it (50)
+
+### Soal:
+
+Can you find the flag in file without running it? You can also find the file in /problems/strings-it_5_1fd17da9526a76a4fffce289dee10fbb on the shell server.
+
+### Pembahasan:
+
+Menggunakan perintah "strings" kita dapat menemukan flagnya.
+
+```bash
+$ strings strings | grep "picoCTF"
+```
+
+<details>
+  <summary>Tekan untuk melihat flag</summary>
+  
+  ```
+  picoCTF{5tRIng5_1T_dd38f284}
+  ```
+</details>
+
