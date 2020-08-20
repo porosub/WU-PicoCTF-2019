@@ -687,6 +687,7 @@ tgt.sendline(str(ans))
 tgt.interactive()
 ```
 dimana tgt adalah variabel dari target kita yakni program times-up, karena file kodingan tidak bisa dibuat di direktori file soal maka file ans.py atau jawabannya dibuat di home akun shell pico kita. lalu recvuntil adalah receive until dimana kita memperoleh output sampai ditemukan kembali kalimat "Challenge: ". recvline berguna untuk memperoleh satu baris kalimat yang kita cari dari variabel tgt yang nantinya akan disimpan pada variabel soal. Varibel soal ini nantinya akan dikembalikan dalam tipe integer dan diubah lagi menjadi string ketika flagnya dikirim ke shell(mungkin agak banyak salah penjelasannya, source penggunaan pwntool => http://folk.uio.no/laszloe/ctf/pwn_tools.pdf)
+
 Sehingga menghasilkan output berikut
 picoCTF{Gotta go fast. Gotta go FAST. #2d5896e7}
 ![](/Rekayasa%20Balik/ss_writeup_aldifp01/timesuppico2.png)
