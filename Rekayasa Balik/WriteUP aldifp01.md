@@ -9,9 +9,9 @@
 | [vault-door-3](#2-vault-door-3-200)|
 | [asm2](#5-asm2-250)|
 | [vault-door-5](#3-vault-door-5-300)|
-| [Need For Speed]()|
+| [Need For Speed](#6-need-for-speed-400)|
 | [vault-door-7](#4-vault-door-7-400)|
-| [Time’s Up]()|
+| [Time’s Up](#7-times-up-400)|
 
 ---
 ## 1. vault door 1 (100)
@@ -431,7 +431,7 @@ Not fast enough. BOOM!
 ```
 Maka dicoba lihat codingannya dengan menggunakan tools untuk reversing seperti IDA, Ghidra dsb.
 Berikut tampilan ketika membuka ghidra
-###MASUKAN GAMBAR
+![](/Rekayasa%20Balik/ss_writeup_aldifp01/nfs1.png)
 Maka kita mencari main class dari kodingan tersebut, cek pada bagian symbol tree dan terdapat main class yang codingannya sebagai berikut
 ```
 undefined8 main(void)
@@ -548,7 +548,8 @@ Ketika membuka fungsi get_key() tadi, pada bagian assembly kita bisa melihat ada
         00100904 5d              POP        RBP
         00100905 c3              RET
 ```
-Maka, kita coba mencari alamat key pada program ini pada bagian fungsi get_key() dengan menggunakan kode berikut dan sekaligus hasilnya (sebetulnya masih kurang paham apakah kode ini memanggil pada fungsi atau mencari alamat pada fungsi, karena nanti juga menggunakan kode call untuk memanggil fungsi. sumber referensi untuk kode-kode software gdb dari https://www.ibm.com/support/pages/debugger-commands-aix-dbx-solaris-dbx-linux-gdb) 
+Maka, kita coba mencari alamat key pada program ini pada bagian fungsi get_key() dengan menggunakan kode berikut dan sekaligus hasilnya (sebetulnya masih kurang paham apakah kode ini memanggil pada fungsi atau mencari alamat pada fungsi, karena nanti juga menggunakan kode call untuk memanggil fungsi. Maka kita coba debug dengan menggunakan gdb, sumber referensi untuk kode-kode software gdb dari https://www.ibm.com/support/pages/debugger-commands-aix-dbx-solaris-dbx-linux-gdb) 
+![](![](https://github.com/divisi-security-poros/WU-PicoCTF-2019/blob/rekayasa-2/Rekayasa%20Balik/ss_writeup_aldifp01/nfs2.png)
 ```
 (gdb) x/32i get_key()
 'get_key' has unknown return type; cast the call to its declared return type
@@ -603,6 +604,7 @@ PICOCTF{Good job keeping bus #3044d295 speeding along!}  <=== FLAG
 $1 = 56
 (gdb) 
 ```
+![](https://github.com/divisi-security-poros/WU-PicoCTF-2019/blob/rekayasa-2/Rekayasa%20Balik/ss_writeup_aldifp01/nfs3-flag.png)
 Note: flagnya harus PICOCTF bukan picoCTF, tadi coba picoCTF error terus. Lalu diganti PICOCTF baru berhasil.
 
 <details>
@@ -662,7 +664,7 @@ undefined8 main(void)
   return 0;
 }
 ```
-Pada fungsi main tersebut terdapat alarm yang terus, maka untuk mengakali supaya jawaban langsung digenerate sekaligus dengan soal kita menggunakan pwntools yang terdapat pada python. Apabila belum memiliki pwntools bisa diinstall dengan kode berikut. Namun untuk soal ini kita melakukannya di shell picoctf langsung karena file flagnya tersimpan di server karena nanti akan menghasilkan output berikut
+Pada fungsi main tersebut terdapat alarm yang terus, maka untuk mengakali supaya jawaban langsung digenerate sekaligus dengan soal kita menggunakan pwntools yang terdapat pada python. Apabila belum memiliki pwntools bisa diinstall dengan kode berikut. Namun untuk soal ini kita melakukannya di shell picoctf langsung karena file flagnya tersimpan di server karena nanti akan menghasilkan output berikut apabila dijalankan di komputer kita
 ```
 oot@yeet:/home/aldifp/Downloads# python3 times-up_answer.py 
 [+] Starting local process './times-up': pid 6927
@@ -673,8 +675,8 @@ Solution? Congrats! Here is the flag!
 [*] Process './times-up' stopped with exit code 0 (pid 6927)
 [*] Got EOF while reading in interactive
 ```
+![](/Rekayasa%20Balik/ss_writeup_aldifp01/timesuppico.png)
 Karena kita tidak memiliki flag.txt jadi kita lakukan langsung di shell picoctf karena kemungkinan besar file flagnya ada di server. Ketika sudah masuk di shell picoctf, kita menggunakan vim untuk membuat source code berikut
-
 ```
 from pwn import *
 tgt=process('./times-up')
@@ -685,9 +687,10 @@ tgt.sendline(str(ans))
 tgt.interactive()
 ```
 dimana tgt adalah variabel dari target kita yakni program times-up, karena file kodingan tidak bisa dibuat di direktori file soal maka file ans.py atau jawabannya dibuat di home akun shell pico kita. lalu recvuntil adalah receive until dimana kita memperoleh output sampai ditemukan kembali kalimat "Challenge: ". recvline berguna untuk memperoleh satu baris kalimat yang kita cari dari variabel tgt yang nantinya akan disimpan pada variabel soal. Varibel soal ini nantinya akan dikembalikan dalam tipe integer dan diubah lagi menjadi string ketika flagnya dikirim ke shell(mungkin agak banyak salah penjelasannya, source penggunaan pwntool => http://folk.uio.no/laszloe/ctf/pwn_tools.pdf)
-
 Sehingga menghasilkan output berikut
 picoCTF{Gotta go fast. Gotta go FAST. #2d5896e7}
+![](/Rekayasa%20Balik/ss_writeup_aldifp01/timesuppico2.png)
+
 <details>
   <summary>Tekan untuk melihat flag</summary>
   
