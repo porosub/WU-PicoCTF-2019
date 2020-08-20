@@ -9,8 +9,9 @@
 | [asm1](#2-asm1-200)|
 | [vault-door-4](#3-vault-door-4-250)|
 | [asm3](#4-asm3-300)|
-| [vault-door-6](#5-vault-door-6-350)|
-| [Time’s Up]()|
+| [droids0](#5-droids0-300)|
+| [vault-door-6](#6-vault-door-6-350)|
+
 
 ---
 ## 1. vault-door-training (50)
@@ -162,8 +163,26 @@ gcc -m32 test.o soltest.o -o test
 
 </details>  
 
+## 5. droids0 (300)
+### Soal:
+Where do droid logs go. Check out this file. You can also find the file in /problems/droids0_0_205f7b4a3b23490adffddfcfc45a2ca3.
 
-## 5. vault-door-6 (350)
+### Pembahasan:
+hint dari soal itu adalah dengan menjalankan dengan emulator android.
+kita download dulu soalnya untuk dianalisa (saya menggunakan scp)
+*$scp ahm4d@2019shell1.picoctf.com:/problems/droids0_0_205f7b4a3b23490adffddfcfc
+5a2ca3/zero.apk /home/ahm4d/*
+setelah itu kita coba jalankan dengan emulator terserah, saya memakai android studio, setelah itu pilih opsi **Profile or debug APK** lalu klik run. hmmm kita klik flag tidak ada apa-apa.
+coba kita lihat log ternyata ada flag.
+intinya button flag tidak langsung menampilkan flag dilayar. tapi kita harus lihat dibagian lognya.
+<details>
+    <summary>Flagnya</summary>
+
+    picoCTF{a.moose.once.bit.my.sister}
+
+</details> 
+
+## 6. vault-door-6 (350)
 
 ### Soal:
 This vault uses an XOR encryption scheme. The source code for this vault is here: [VaultDoor6.java](https://2019shell1.picoctf.com/static/baceedcb57993355ba6eac807ca041b0/VaultDoor6.java)
