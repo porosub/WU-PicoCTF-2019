@@ -11,7 +11,7 @@
 | [m00nwalk](#4-m00nwalk-250)|
 | [shark on wire 2](#5-shark-on-wire-2-300)|
 | [m00nwalk2](#6-m00nwalk-2-300)|
-| [Investigative Reversing 1]()|
+| [Investigative Reversing 1](#7-Investigative-Reversing-1-350)|
 
 ---
 ## 1. unzip (50)
@@ -213,7 +213,7 @@ picoCTF{the_answer_lies_hidden_in_plain_sight}
   ```
 </details>
 
-## 7. Investigative reversing 1
+## 7. Investigative Reversing 1 (350)
 
 ### Soal :
 
@@ -221,3 +221,28 @@ We have recovered a [binary](https://2019shell1.picoctf.com/static/9e61f958201d4
 
 ### Pembahasan :
 
+membuka file png menggunakan hex editor
+
+```
+mystery.png  ==> CF{An1_b3ee41ac}
+mystery2.png ==> s
+mystery3.png ==> icT0tha_
+```
+
+kita coba cek binary file 
+
+```
+mystery: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 3.2.0, BuildID[sha1]=1b08f7a782a77a6eeb80d7c1d621b4f16f76200a, not stripped
+```
+
+terlihat bahwa file nya not stripped, lalu kita coba lihat source nya menggunakan IDA64
+
+lalu saya analisa dari pseudocode yang dari IDA 64 tersebut, setelah sekian lama lalu akhirnya didapat flagnya
+
+<details>
+  <summary>Tekan untuk melihat flag</summary>
+  
+  ```
+  picoCTF{An0tha_1_b3ee41ac}
+  ```
+</details>
