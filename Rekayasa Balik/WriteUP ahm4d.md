@@ -171,8 +171,8 @@ Where do droid logs go. Check out this file. You can also find the file in /prob
 hint dari soal itu adalah dengan menjalankan dengan emulator android.
 kita download dulu soalnya untuk dianalisa (saya menggunakan scp) dengan perintah 
 ```
-*$scp ahm4d@2019shell1.picoctf.com:/problems/droids0_0_205f7b4a3b23490adffddfcfc
-5a2ca3/zero.apk /home/ahm4d/*
+$scp ahm4d@2019shell1.picoctf.com:/problems/droids0_0_205f7b4a3b23490adffddfcfc
+5a2ca3/zero.apk /home/ahm4d/
 ```
 setelah itu kita coba jalankan dengan emulator terserah, saya memakai android studio, setelah itu pilih opsi **Profile or debug APK** lalu klik run. hmmm kita klik flag tidak ada apa-apa.
 coba kita lihat log ternyata ada flag.
