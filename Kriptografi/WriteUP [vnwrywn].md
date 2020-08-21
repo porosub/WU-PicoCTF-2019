@@ -12,7 +12,7 @@
 | [Flags]()|
 | [Mr-Worldwide](#1-Mr-Worldwide-200)|
 | [Tapping](#2-Tapping-200)|
-| [la cifra de](#3-la-cifra-de-200)|
+| [la-cifra-de](#3-la-cifra-de-200)
 
 ---
 ## 1. Mr-Worldwide (200)
@@ -27,6 +27,7 @@ Pada challenge ini kita diberikan serangkaian angka yang dikelompokkan. Di mana 
 ![Koordinat pertama](http://i.imgur.com/g714QQV.png)
 
 Semua lokasi pada titik-titik tersebut adalah:
+```
 * Nakanocho, Kamigyo Ward, Kyoto, Japan
 * Odesa, Odessa Oblast, Ukraine
 * Dayton, OH 45402, United States
@@ -39,6 +40,7 @@ Semua lokasi pada titik-titik tersebut adalah:
 * Sleepy Hollow, NY 10591, United States
 * 1 Chadrick Cove, Kodiak, AK 99615, United States
 * Faculty Of Engineering, Al Azaritah WA Ash Shatebi, Qism Bab Sharqi, Alexandria Governorate, Egypt
+``` 
 
 Ternyata (dan untungnya), tidak semua lokasi merujuk pada suatu tempat secara spesifik. Perlu diingat bahwa terdapat **_** setelah tempat keenam. Jika kita memulai dengan nama negara dari masing masing tempat, kita akan mendapatkan JUSTUM_EENUUE, yang ternyata bukanlah flagnya. Maka, kita beralih ke nama kota yang akan memberikan kita KODIAK_ALASKA yang ternyata adalah flagnya.
 
@@ -108,6 +110,23 @@ Dapat disimpulkan bahwa key untuk seksi berikutnya adalah "agfl", dan "lagf" unt
 <summary>Tekan untuk melihat flag</summary>
 
   <code>picoCTF{b311a50_0r_v1gn3r3_c1ph3rb6cdf651}</code>
+
+</details>
+...
+
+## 4. waves over lambda (300)
+
+### Soal:
+We made alot of substitutions to encrypt this. Can you decrypt it? Connect with nc 2019shell1.picoctf.com 45185.
+### Pembahasan:
+Pada challenge ini kita mendapatkan sebuah teks yang tidak koheren. Berdasarkan deskripsi soal ini, Teks ini dienkripsi menggunakan substitusi, sebuah kriptosistem yang memiliki kelemahan fatal; dapat dideteksi menggunakan rata-rata persebaran huruf pada keseluruhan kata yang ada pada kamus suatu bahasa. Untuk menghemat waktu, kita dapat menggunakan sebuah [*tool*](https://www.dcode.fr/monoalphabetic-substitution) daring untuk memecahkan enkripsinya.
+
+![Hasil dekripsi](http://i.imgur.com/fiRl5oE.png)
+
+<details>
+<summary>Tekan untuk melihat flag</summary>
+
+  <code>picoCTF{frequency_is_c_over_lambda_mupgpennod}</code>
 
 </details>
 ...
