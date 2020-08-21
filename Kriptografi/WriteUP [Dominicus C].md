@@ -1,18 +1,18 @@
 # Kriptografi
 
-## Penulis: [Dominicus C]
+## Penulis: [Dominicus C](https://github.com/SlimShady16)
 ## Daftar Isi:
 
 | Kriptografi           |
 | -------------         |
-| [The Numbers]()|
-| [13]()|
-| [Easy1]()|
-| [Caesar]()|
-| [Flags]()|
+| [The Numbers](#1-the-numbers-50)|
+| [13](#2-13-100)|
+| [Easy1](#3-easy1-100)|
+| [Caesar](#4-caesar-100)|
+| [Flags](#5-flags-200)|
 
 ---
-## 1. The Numbers ()
+## 1. The Numbers (50)
 
 ### Soal:
 The numbers... what do they mean?
@@ -25,7 +25,7 @@ cipher : A1Z26
 flag : PICOCTF{THENUMBERSMASON}
 ...
 
-## 2. 13 ()
+## 2. 13 (100)
 
 ### Soal:
 Cryptography can be easy, do you know what ROT13 is? cvpbPGS{abg_gbb_onq_bs_n_ceboyrz}
@@ -36,7 +36,7 @@ cipher : caesar
 flag : picoCTF{not_too_bad_of_a_problem}
 ...
 
-## 3. Easy1 ()
+## 3. Easy1 (100)
 
 ### Soal:
 The one time pad can be cryptographically secure, but not when you know the key. Can you solve this? We've given you the encrypted flag, key, and a table to help UFJKXQZQUNB with the key of SOLVECRYPTO. Can you use this table to solve it?.
@@ -48,7 +48,7 @@ cipher = one time pad
 flag : picoCTF{CRYPTOISFUN}
 ...
 
-## 4. caesar ()
+## 4. caesar (100)
 
 ### Soal:
 Decrypt this message. You can find the ciphertext in /problems/caesar_4_33e5994add902b2321c8c38c8b962eff on the shell server.
@@ -59,7 +59,7 @@ cipher = caesar
 flag = picoCTF{crossingtherubiconljmawiae}
 ...
 
-## 5. Flags ()
+## 5. Flags (200)
 
 ### Soal:
 What do the flags mean?
