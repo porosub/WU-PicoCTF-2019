@@ -12,6 +12,7 @@
 | [Flags]()|
 | [Mr-Worldwide](#1-Mr-Worldwide-200)|
 | [Tapping](#2-Tapping-200)|
+| [la cifra de](#3-la-cifra-de-200)|
 
 ---
 ## 1. Mr-Worldwide (200)
