@@ -26,7 +26,6 @@ Pada challenge ini kita diberikan serangkaian angka yang dikelompokkan. Di mana 
 ![Koordinat pertama](http://i.imgur.com/g714QQV.png)
 
 Semua lokasi pada titik-titik tersebut adalah:
-```
 * Nakanocho, Kamigyo Ward, Kyoto, Japan
 * Odesa, Odessa Oblast, Ukraine
 * Dayton, OH 45402, United States
@@ -39,7 +38,6 @@ Semua lokasi pada titik-titik tersebut adalah:
 * Sleepy Hollow, NY 10591, United States
 * 1 Chadrick Cove, Kodiak, AK 99615, United States
 * Faculty Of Engineering, Al Azaritah WA Ash Shatebi, Qism Bab Sharqi, Alexandria Governorate, Egypt
-``` 
 
 Ternyata (dan untungnya), tidak semua lokasi merujuk pada suatu tempat secara spesifik. Perlu diingat bahwa terdapat **_** setelah tempat keenam. Jika kita memulai dengan nama negara dari masing masing tempat, kita akan mendapatkan JUSTUM_EENUUE, yang ternyata bukanlah flagnya. Maka, kita beralih ke nama kota yang akan memberikan kita KODIAK_ALASKA yang ternyata adalah flagnya.
 
