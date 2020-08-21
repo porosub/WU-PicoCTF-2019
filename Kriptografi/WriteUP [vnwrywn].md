@@ -120,7 +120,13 @@ Dapat disimpulkan bahwa key untuk seksi berikutnya adalah "agfl", dan "lagf" unt
 ### Soal:
 We made alot of substitutions to encrypt this. Can you decrypt it? Connect with nc 2019shell1.picoctf.com 45185.
 ### Pembahasan:
-Pada challenge ini kita mendapatkan sebuah teks yang tidak koheren. Berdasarkan deskripsi soal ini, Teks ini dienkripsi menggunakan substitusi, sebuah kriptosistem yang memiliki kelemahan fatal; dapat dideteksi menggunakan rata-rata persebaran huruf pada keseluruhan kata yang ada pada kamus suatu bahasa. Untuk menghemat waktu, kita dapat menggunakan sebuah [*tool*](https://www.dcode.fr/monoalphabetic-substitution) daring untuk memecahkan enkripsinya.
+Pada challenge ini kita mendapatkan sebuah teks yang tidak koheren.
+>-------------------------------------------------------------------------------
+>zqfensph jvnv mh iqon clse - cnvbovfzi_mh_z_qxvn_lsadws_aoyeyvffqw
+>-------------------------------------------------------------------------------
+>slvrvi ciqwqnqxmpzj gsnsastqx ush pjv pjmnw hqf qc ciqwqn ysxlqxmpzj gsnsastqx, s lsfw qufvn uvll gfquf mf qon wmhpnmzp mf jmh quf wsi, sfw hpmll nvavadvnvw saqfe oh qumfe pq jmh elqqai sfw pnsemz wvspj, ujmzj jsyyvfvw pjmnpvvf ivsnh seq, sfw ujmzj m hjsll wvhznmdv mf mph ynqyvn ylszv. cqn pjv ynvhvfp m umll qfli hsi pjsp pjmh lsfwqufvncqn hq uv ohvw pq zsll jma, slpjqoej jv jsnwli hyvfp s wsi qc jmh lmcv qf jmh quf vhpspvush s hpnsfev piyv, ivp qfv ynvppi cnvbovfpli pq dv avp umpj, s piyv sdkvzp sfw xmzmqoh sfw sp pjv hsav pmav hvfhvlvhh. dop jv ush qfv qc pjqhv hvfhvlvhh yvnhqfh ujq snv xvni uvll zsysdlv qc lqqgmfe scpvn pjvmn uqnlwli sccsmnh, sfw, syysnvfpli, scpvn fqpjmfe vlhv. ciqwqn ysxlqxmpzj, cqn mfhpsfzv, dvesf umpj fvrp pq fqpjmfe; jmh vhpspv ush qc pjv hasllvhp; jv nsf pq wmfv sp qpjvn avf'h psdlvh, sfw cshpvfvw qf pjva sh s pqswi, ivp sp jmh wvspj mp syyvsnvw pjsp jv jsw s jofwnvw pjqohsfw nqodlvh mf jsnw zshj. sp pjv hsav pmav, jv ush sll jmh lmcv qfv qc pjv aqhp hvfhvlvhh, csfpshpmzsl cvllquh mf pjv ujqlv wmhpnmzp. m nvyvsp, mp ush fqp hpoymwmpipjv askqnmpi qc pjvhv csfpshpmzsl cvllquh snv hjnvuw sfw mfpvllmevfp vfqoejdop kohp hvfhvlvhhfvhh, sfw s yvzolmsn fspmqfsl cqna qc mp.
+
+Berdasarkan deskripsi soal ini, Teks ini dienkripsi menggunakan substitusi, sebuah kriptosistem yang memiliki kelemahan fatal; dapat dideteksi menggunakan rata-rata persebaran huruf pada keseluruhan kata yang ada pada kamus suatu bahasa. Untuk menghemat waktu, kita dapat menggunakan sebuah [*tool*](https://www.dcode.fr/monoalphabetic-substitution) daring untuk memecahkan enkripsinya.
 
 ![Hasil dekripsi](http://i.imgur.com/fiRl5oE.png)
 
