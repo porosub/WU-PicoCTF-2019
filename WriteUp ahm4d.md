@@ -5,7 +5,7 @@
 
 | Binary Exploitation  |
 | ------------- |
-| [practice-run-1](#1-practice-run--1-50)|
+| [practice-run-1](#1-practice-run-1-50)|
 | [OverFlow-0](#2-OverFlow-0-100)|
 
 
