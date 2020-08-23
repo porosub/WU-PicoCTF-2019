@@ -10,8 +10,8 @@
 | [c0rrupt](#3-c0rrupt-250)|
 | [m00nwalk](#4-m00nwalk-250)|
 | [shark on wire 2](#5-shark-on-wire-2-300)|
-| [m00nwalk2]()|
-| [Investigative Reversing 1]()|
+| [m00nwalk2](#6-m00nwalk-2-300)|
+| [Investigative Reversing 1](#7-Investigative-Reversing-1-350)|
 
 ---
 ## 1. unzip (50)
@@ -173,3 +173,76 @@ lalu kita rubah ke ascii, dan kita akan mendapat flag nya.
   ```
 </details>
  
+## 6. m00nwalk 2 (300)
+
+### Soal : 
+
+Revisit the last [transmission](https://2019shell1.picoctf.com/static/1b9456ca6c4ee2a2aa094d98581f8c37/message.wav). We think this transmission contains a hidden message. There are also some clues [clue 1](https://2019shell1.picoctf.com/static/1b9456ca6c4ee2a2aa094d98581f8c37/clue1.wav), [clue 2](https://2019shell1.picoctf.com/static/1b9456ca6c4ee2a2aa094d98581f8c37/clue2.wav), [clue 3](https://2019shell1.picoctf.com/static/1b9456ca6c4ee2a2aa094d98581f8c37/clue3.wav). You can also find the files in /problems/m00nwalk2_0_c513cbf9ae6c76876372b8e29826e77b.
+
+### Pembahasan :
+
+mari kita buka dulu dengan menggunakan sstv decoder didapatkan hasil:
+
+clue :
+```
+1 Password hidden_stegosaurus
+2 The quieter you are the more you can HEAR
+3 Alan Eliasen the FutureBoy 
+```
+
+dan untuk file message ketika kita coba decode menggunakan sstv decoder menampilkan flag soal [m00nwalk](#4-m00nwalk-250).
+
+kita coba resapi dan hayati setiap clue, clue 1 kita bisa ambil bahwa password untuk mendapatkan flag adalah hidden_stegosaurus, untuk clue 3 setelah kita coba search di pencarian ternyata merujuk ke [website ini](https://futureboy.us/stegano/decinput.html)
+
+kita bisa mendecode melalui web tersebut atau menggunakan terminal melalui command:
+
+```
+┌─[nabawi@parrot]─[~/Downloads]
+└──╼ $steghide extract -sf message.wav -p hidden_stegosaurus
+wrote extracted data to "steganopayload12154.txt".
+┌─[nabawi@parrot]─[~/Downloads]
+└──╼ $cat steganopayload12154.txt 
+picoCTF{the_answer_lies_hidden_in_plain_sight}
+```
+
+<details>
+  <summary>Tekan untuk melihat flag</summary>
+  
+  ```
+  picoCTF{the_answer_lies_hidden_in_plain_sight}
+  ```
+</details>
+
+## 7. Investigative Reversing 1 (350)
+
+### Soal :
+
+We have recovered a [binary](https://2019shell1.picoctf.com/static/9e61f958201d4c4a7e7e01aa06edf224/mystery) and a few images: [image](https://2019shell1.picoctf.com/static/9e61f958201d4c4a7e7e01aa06edf224/mystery.png), [image2](https://2019shell1.picoctf.com/static/9e61f958201d4c4a7e7e01aa06edf224/mystery2.png), [image3](https://2019shell1.picoctf.com/static/9e61f958201d4c4a7e7e01aa06edf224/mystery3.png). See what you can make of it. There should be a flag somewhere. Its also found in /problems/investigative-reversing-1_2_72fdacf1b15a239d3327571cd296b954 on the shell server.
+
+### Pembahasan :
+
+membuka file png menggunakan hex editor
+
+```
+mystery.png  ==> CF{An1_b3ee41ac}
+mystery2.png ==> s
+mystery3.png ==> icT0tha_
+```
+
+kita coba cek binary file 
+
+```
+mystery: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 3.2.0, BuildID[sha1]=1b08f7a782a77a6eeb80d7c1d621b4f16f76200a, not stripped
+```
+
+terlihat bahwa file nya not stripped, lalu kita coba lihat source nya menggunakan IDA64
+
+lalu saya analisa dari pseudocode yang dari IDA 64 tersebut, setelah sekian lama lalu akhirnya didapat flagnya
+
+<details>
+  <summary>Tekan untuk melihat flag</summary>
+  
+  ```
+  picoCTF{An0tha_1_b3ee41ac}
+  ```
+</details>
