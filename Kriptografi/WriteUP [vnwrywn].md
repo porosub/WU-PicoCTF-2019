@@ -24,7 +24,7 @@ The [numbers](https://2019shell1.picoctf.com/static/eb3589c566dd3f809908053460ac
 ### Pembahasan:
 Pada soal ini kita diberikan gambar sebagai berikut
 
-![Soal](https://2019shell1.picoctf.com/static/eb3589c566dd3f809908053460acb817/the_numbers.png)
+![Soal](https://imgur.com/a/31McKKE)
 
 Dapat dilihat bahwa setiap bilangan dipisahkan dengan sebuah spasi, dan bilangan tersebut tidak ada yang melebihi 26. Maka dari itu *ciphertext* ini kemungkinan besar dienkripsi menggunakan *letter number* (A1Z26) *cipher*. ciphertext ini dapat dipecahkan dengan mengubah setiap angka menjadi huruf pada indeks tersebut (contoh: 1=A dan 26=Z). Atau anda dapat menggunakan [peralatan daring](https://www.dcode.fr/letter-number-cipher) untuk memecahkannya.
 
@@ -34,7 +34,6 @@ Dapat dilihat bahwa setiap bilangan dipisahkan dengan sebuah spasi, dan bilangan
   <code>PICOCTF{THENUMBERSMASON}</code>
 
 </details>
-...
 
 ## 2. Caesar (100)
 
@@ -55,7 +54,6 @@ Dapat dilihat bahwa melakukan pergeseran sebanyak 15 akan mengasilkan flag yang 
   <code>picoCTF{crossingtherubiconojovpqjs}</code>
 
 </details>
-...
 
 ## 3. Flags (200)
 
@@ -74,7 +72,6 @@ Pada challenge ini kita diberikan serangkaian bendera yang beragam. Bendera ini 
   <code>PICOCTF{F1AG5AND5TUFF}</code>
 
 </details>
-...
 
 ## 4. Mr-Worldwide (200)
 
@@ -111,7 +108,6 @@ Ternyata (dan untungnya), tidak semua lokasi merujuk pada suatu tempat secara sp
   <code>picoCTF{KODIAK_ALASKA}</code>
 
 </details>
-...
 
 ## 5. Tapping (200)
 
@@ -128,7 +124,6 @@ Pada soal ini diberikan sebuah kode morse yang dapat langsung di*decode*. Kode m
   <code>PICOCTF{M0RS3C0D31SFUN903140448}</code>
 
 </details>
-...
 
 ## 6. la cifra de (200)
 
@@ -152,19 +147,19 @@ Dapat dilihat bahwa key "flag" dapat digunakan sampai pertengahan kata yang seha
 Dapat disimpulkan bahwa key untuk seksi berikutnya adalah "agfl", dan "lagf" untuk berikutnya lagi. Setelah itu dapat dilihat hasil dekripsi secara total dari teks tersebut.
 
 >It is interesting how in history people often receive credit for things they did not create
-
+>
 >During the course of history, the Vigenère Cipher has been reinvented many times
-
+>
 >It was falsely attributed to Blaise de Vigenère as it was originally described in 1553 by Giovan Battista Bellaso in his book La cifra del. Sig. Giovan Battista Bellaso
-
+>
 >For the implementation of this cipher a table is formed by sliding the lower half of an ordinary alphabet for an apparently random number of places with respect to the upper halfpicoCTF{b311a50_0r_v1gn3r3_c1ph3rb6cdf651}
-
+>
 >The first well-documented description of a polyalphabetic cipher however, was made around 1467 by Leon Battista Alberti.
-
+>
 >The Vigenère Cipher is therefore sometimes called the Alberti Disc or Alberti Cipher.
-
+>
 >In 1508, Johannes Trithemius invented the so-called tabula recta (a matrix of shifted alphabets) that would later be a critical component of the Vigenère Cipher.
-
+>
 >Bellaso’s second booklet appeared in 1555 as a continuation of the first. The lower halves of the alphabets are now shifted regularly, but the alphabets and the index letters are mixed by means of a mnemonic key phrase, which can be different with each correspondent.
 
 <details>
@@ -173,7 +168,6 @@ Dapat disimpulkan bahwa key untuk seksi berikutnya adalah "agfl", dan "lagf" unt
   <code>picoCTF{b311a50_0r_v1gn3r3_c1ph3rb6cdf651}</code>
 
 </details>
-...
 
 ## 7. rsa-pop-quiz (300)
 
@@ -252,7 +246,6 @@ Setelah menyelesaikan soal terakhir, adna akan diberitahubahwa jika anda menguba
   <code>picoCTF{wA8_th4t$_ill3aGal..o1828d357}</code>
 
 </details>
-...
 
 ## 8. waves over lambda (300)
 
@@ -269,4 +262,3 @@ Pada challenge ini kita mendapatkan sebuah teks yang tidak koheren. Berdasarkan 
   <code>picoCTF{frequency_is_c_over_lambda_mupgpennod}</code>
 
 </details>
-...
