@@ -5,7 +5,7 @@
 
 | Kriptografi           |
 | -------------         |
-| [The Numbers](#1-The-Numbers-100)|
+| [The Numbers](#1-The-Numbers-50)|
 | [Caesar](#2-Caesar-100)|
 | [Flags](#3-Flags-200)|
 | [Mr-Worldwide](#4-Mr-Worldwide-200)|
