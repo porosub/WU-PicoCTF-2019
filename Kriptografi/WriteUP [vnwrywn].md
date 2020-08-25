@@ -5,19 +5,78 @@
 
 | Kriptografi           |
 | -------------         |
-| [The Numbers]()|
-| [13]()|
-| [Easy1]()|
-| [Caesar]()|
-| [Flags]()|
-| [Mr-Worldwide](#1-Mr-Worldwide-200)|
-| [Tapping](#2-Tapping-200)|
-| [la cifra de](#3-la-cifra-de-200)|
-| [rsa-pop-quiz](#4-rsa-pop-quiz-200)|
-| [waves over lambda](#5-waves-over-lambda-300)|
+| [The Numbers](#1-The-Numbers-100)|
+| [Caesar](#2-Caesar-100)|
+| [Flags](#3-Flags-200)|
+| [Mr-Worldwide](#4-Mr-Worldwide-200)|
+| [Tapping](#5-Tapping-200)|
+| [la cifra de](#6-la-cifra-de-200)|
+| [rsa-pop-quiz](#7-rsa-pop-quiz-300)|
+| [waves over lambda](#8-waves-over-lambda-300)|
 
 ---
-## 1. Mr-Worldwide (200)
+## 1. The Numbers (50)
+
+### Soal:
+The [numbers](https://2019shell1.picoctf.com/static/eb3589c566dd3f809908053460acb817/the_numbers.png)... what do they mean?
+...
+
+### Pembahasan:
+Pada soal ini kita diberikan gambar sebagai berikut
+
+![Soal](https://2019shell1.picoctf.com/static/eb3589c566dd3f809908053460acb817/the_numbers.png)
+
+Dapat dilihat bahwa setiap bilangan dipisahkan dengan sebuah spasi, dan bilangan tersebut tidak ada yang melebihi 26. Maka dari itu *ciphertext* ini kemungkinan besar dienkripsi menggunakan *letter number* (A1Z26) *cipher*. ciphertext ini dapat dipecahkan dengan mengubah setiap angka menjadi huruf pada indeks tersebut (contoh: 1=A dan 26=Z). Atau anda dapat menggunakan [peralatan daring](https://www.dcode.fr/letter-number-cipher) untuk memecahkannya.
+
+<details>
+<summary>Tekan untuk melihat flag</summary>
+
+  <code>PICOCTF{THENUMBERSMASON}</code>
+
+</details>
+...
+
+## 2. Caesar (100)
+
+### Soal:
+Decrypt this [message](https://2019shell1.picoctf.com/static/1f33970830e651254c964ee5d04f0e85/ciphertext). You can find the ciphertext in /problems/caesar_6_238b8f4604d91ecb59cda5b4f0e66fc8 on the shell server.
+...
+
+### Pembahasan:
+Pada challenge ini kita diberikan seutas huruf yang sudah berada dalam format flag yang benar. Akan tetapi, (tentu saja) itu bukanlah flagnya. Berdasarkan judul dari challenge ini, dapan diterka bahwa flag ini dienkripsi menggunakan *caesar cipher*. *Caesar cipher* merupakan *cipher* substitusi monoalfabetik yang dilakukan dengan "menggeser" urutan huruf. Flag dari challenge ini dapat didapatkan dengan melakukan serangan *bruteforce* pada teks yang berada dalam kurung kurawal. Salah satu cara yang paling mudah untuk melakukan ini adalah dengan menggunakan [peralatan daring](https://www.dcode.fr/caesar-cipher).
+
+![Hasil](http://i.imgur.com/X9DwAEj.png)
+
+Dapat dilihat bahwa melakukan pergeseran sebanyak 15 akan mengasilkan flag yang dicari.
+
+<details>
+<summary>Tekan untuk melihat flag</summary>
+
+  <code>picoCTF{crossingtherubiconojovpqjs}</code>
+
+</details>
+...
+
+## 3. Flags (200)
+
+### Soal:
+What do the [flags](https://2019shell1.picoctf.com/static/ae23b7df04365ab0213f0158c5b5d694/flag.png) mean?
+...
+
+### Pembahasan:
+Pada challenge ini kita diberikan serangkaian bendera yang beragam. Bendera ini ternyata merupakan [*International Code of Signals*](https://en.wikipedia.org/wiki/International_Code_of_Signals). Anda dapat mendapatkan flagnya dengan menggunakan petunjuk berikut.
+
+![Petunjuk](https://upload.wikimedia.org/wikipedia/commons/f/fa/ICS-flags.png)
+
+<details>
+<summary>Tekan untuk melihat flag</summary>
+
+  <code>PICOCTF{F1AG5AND5TUFF}</code>
+
+</details>
+...
+
+## 4. Mr-Worldwide (200)
 
 ### Soal:
 A musician left us a [message](https://2019shell1.picoctf.com/static/46e165b0a953075440f3a544fdb4cff1/message.txt). What's it mean?
@@ -54,7 +113,7 @@ Ternyata (dan untungnya), tidak semua lokasi merujuk pada suatu tempat secara sp
 </details>
 ...
 
-## 2. Tapping (200)
+## 5. Tapping (200)
 
 ### Soal:
 Theres tapping coming in from the wires. What's it saying nc 2019shell1.picoctf.com 49914.
@@ -71,7 +130,7 @@ Pada soal ini diberikan sebuah kode morse yang dapat langsung di*decode*. Kode m
 </details>
 ...
 
-## 3. la cifra de (200)
+## 6. la cifra de (200)
 
 ### Soal:
 I found this cipher in an old book. Can you figure out what it says? Connect with nc 2019shell1.picoctf.com 61559.
@@ -116,7 +175,7 @@ Dapat disimpulkan bahwa key untuk seksi berikutnya adalah "agfl", dan "lagf" unt
 </details>
 ...
 
-## 4. rsa-pop-quiz (300)
+## 7. rsa-pop-quiz (300)
 
 ### Soal:
 Class, take your seats! It's PRIME-time for a quiz... nc 2019shell1.picoctf.com 61751
@@ -195,7 +254,7 @@ Setelah menyelesaikan soal terakhir, adna akan diberitahubahwa jika anda menguba
 </details>
 ...
 
-## 5. waves over lambda (300)
+## 8. waves over lambda (300)
 
 ### Soal:
 We made alot of substitutions to encrypt this. Can you decrypt it? Connect with nc 2019shell1.picoctf.com 45185.
