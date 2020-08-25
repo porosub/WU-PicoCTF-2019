@@ -1,6 +1,6 @@
 # Kriptografi
 
-## Penulis: [vnwrywn]
+## Penulis: [vnwrywn](https://github.com/vnwrywn)
 ## Daftar Isi:
 
 | Kriptografi           |
