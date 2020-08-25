@@ -24,7 +24,7 @@ The [numbers](https://2019shell1.picoctf.com/static/eb3589c566dd3f809908053460ac
 ### Pembahasan:
 Pada soal ini kita diberikan gambar sebagai berikut
 
-![Soal](https://imgur.com/a/31McKKE)
+![Soal](https://imgur.com/T47IWfE.png)
 
 Dapat dilihat bahwa setiap bilangan dipisahkan dengan sebuah spasi, dan bilangan tersebut tidak ada yang melebihi 26. Maka dari itu *ciphertext* ini kemungkinan besar dienkripsi menggunakan *letter number* (A1Z26) *cipher*. ciphertext ini dapat dipecahkan dengan mengubah setiap angka menjadi huruf pada indeks tersebut (contoh: 1=A dan 26=Z). Atau anda dapat menggunakan [peralatan daring](https://www.dcode.fr/letter-number-cipher) untuk memecahkannya.
 
