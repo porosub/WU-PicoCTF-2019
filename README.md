@@ -2,12 +2,14 @@
 WriteUP PicoCTF 2019 oleh Poros Filkom UB
 
 ## Disusun Oleh:
-1. 
-2. 
-3. 
-4. 
-5. 
-6. 
+1. Arceister
+2. Saihan
+3. rifqihz
+4. joulephicar
+5. Dominicus
+6. vnwrywn
+7. ahm4d
+8. aldifp01
 
 
 ## Daftar Soal (Urut Sesuai Jumlah Poin)
